@@ -6,6 +6,8 @@ require_relative 'models/data_model'
 
 class DataBaseServer < Sinatra::Base
   
+  set :port, 4000
+  
   enable :sessions
   set :session_secret, 'super secret'
   
@@ -16,7 +18,6 @@ class DataBaseServer < Sinatra::Base
   get '/set' do
     data = DataModel.new
     data.create(params)
-    params
     session[:data] = data
     redirect '/'
   end
@@ -25,4 +26,6 @@ class DataBaseServer < Sinatra::Base
     data = session[:data]
     data.retrieve(params)
   end
+  
+  run! if app_file == $0
 end
