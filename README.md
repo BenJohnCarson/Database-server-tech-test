@@ -33,6 +33,7 @@ $ bundle
 ```
 $ rackup -p 4000 -o $IP
 Open your prefered browser and navigate to http://localhost:4000
+```
 
 * Running tests
 ```
