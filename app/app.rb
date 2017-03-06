@@ -4,6 +4,8 @@ require 'sinatra/base'
 
 class DataBaseServer < Sinatra::Base
   
+  enable :sessions
+  
   get '/' do
     'Hello'
   end
