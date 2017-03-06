@@ -25,6 +25,7 @@ require 'capybara/rspec'
 require 'capybara/poltergeist'
 
 require './app/app'
+require './app/models/data_model'
 
 Capybara.app = DataBaseServer
 
