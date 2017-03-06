@@ -15,12 +15,14 @@ class DataBaseServer < Sinatra::Base
   
   get '/set' do
     data = DataModel.new
-    data.store(params)
+    data.create(params)
+    params
     session[:data] = data
     redirect '/'
   end
   
   get '/get' do
     data = session[:data]
+    data.retrieve(params)
   end
 end
