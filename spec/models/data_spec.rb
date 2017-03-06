@@ -7,9 +7,17 @@ describe DataModel do
   
   describe "#store" do
     it "adds data to data_store" do
-      data = { somekey: "somevalue" }
+      data = { "somekey"=>"somevalue" }
       data_model.store(data)
       expect(data_model.data_store).to include(data)
+    end
+  end
+  
+  describe "#retrieve" do
+    it "returns value in data_store associated with the key passed in" do
+      data = { "somekey"=>"somevalue" }
+      data_model.store(data)
+      expect(data_model.retrieve("somekey")).to eq "somevalue"
     end
   end
 end
