@@ -8,8 +8,8 @@ class DataBaseServer < Sinatra::Base
     'Hello'
   end
   
-  # get '/set' do
-  #   puts params
-  #   redirect '/'
-  # end
+  get '/set' do
+    puts params
+    redirect '/'
+  end
 end
