@@ -48,11 +48,12 @@ My next step was to turn the brief into user stories that I could use to write f
 
 
 ## <a name="Stories">User Stories</a>
-
+```
 As a server
 So that I can pass data to a database
-Params from post requests I receive should be passed into memory
+Params from requests I receive should be passed into memory
 
 As a server
 So that I can pass data to a client
 Get requests I receive should return the correct value
+```
